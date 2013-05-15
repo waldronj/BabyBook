@@ -9,6 +9,7 @@ using BabyBook.Models;
 
 namespace BabyBook.Controllers
 {
+    [Authorize(Roles = 'Admin, Family')]
     public class MeasurementsController : Controller
     {
         private jwaldronBBookEntities db = new jwaldronBBookEntities();
@@ -36,7 +37,7 @@ namespace BabyBook.Controllers
 
         //
         // GET: /Measurements/Create
-
+        [Authorize(Roles = 'Admin')]
         public ActionResult Create()
         {
             return View();
@@ -44,7 +45,7 @@ namespace BabyBook.Controllers
 
         //
         // POST: /Measurements/Create
-
+        [Authorize(Roles = 'Admin')]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Measurement measurement)
@@ -61,7 +62,7 @@ namespace BabyBook.Controllers
 
         //
         // GET: /Measurements/Edit/5
-
+        [Authorize(Roles = 'Admin')]
         public ActionResult Edit(int id = 0)
         {
             Measurement measurement = db.Measurements.Find(id);
@@ -74,7 +75,7 @@ namespace BabyBook.Controllers
 
         //
         // POST: /Measurements/Edit/5
-
+        [Authorize(Roles = 'Admin')]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Measurement measurement)
@@ -90,7 +91,7 @@ namespace BabyBook.Controllers
 
         //
         // GET: /Measurements/Delete/5
-
+        [Authorize(Roles = 'Admin')]
         public ActionResult Delete(int id = 0)
         {
             Measurement measurement = db.Measurements.Find(id);
@@ -103,7 +104,7 @@ namespace BabyBook.Controllers
 
         //
         // POST: /Measurements/Delete/5
-
+        [Authorize(Roles = 'Admin')]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
