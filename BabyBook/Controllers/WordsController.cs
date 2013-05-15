@@ -9,7 +9,7 @@ using BabyBook.Models;
 
 namespace BabyBook.Controllers
 {
-    [Authorize(Roles = 'Admin, Family')]
+    [Authorize(Roles = "Admin, Family")]
     public class WordsController : Controller
     {
         private jwaldronBBookEntities db = new jwaldronBBookEntities();
@@ -37,7 +37,7 @@ namespace BabyBook.Controllers
 
         //
         // GET: /Words/Create
-        [Authorize(Roles = 'Admin')]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             return View();
@@ -45,7 +45,7 @@ namespace BabyBook.Controllers
 
         //
         // POST: /Words/Create
-        [Authorize(Roles = 'Admin')]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Word word)
@@ -62,7 +62,7 @@ namespace BabyBook.Controllers
 
         //
         // GET: /Words/Edit/5
-        [Authorize(Roles = 'Admin')]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id = 0)
         {
             Word word = db.Words.Find(id);
@@ -75,7 +75,7 @@ namespace BabyBook.Controllers
 
         //
         // POST: /Words/Edit/5
-        [Authorize(Roles = 'Admin')]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Word word)
@@ -91,7 +91,7 @@ namespace BabyBook.Controllers
 
         //
         // GET: /Words/Delete/5
-        [Authorize(Roles = 'Admin')]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int id = 0)
         {
             Word word = db.Words.Find(id);
@@ -104,7 +104,7 @@ namespace BabyBook.Controllers
 
         //
         // POST: /Words/Delete/5
-        [Authorize(Roles = 'Admin')]
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
