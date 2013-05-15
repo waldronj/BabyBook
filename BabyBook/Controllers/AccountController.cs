@@ -54,7 +54,7 @@ namespace BabyBook.Controllers
         {
             WebSecurity.Logout();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Book");
         }
 
         //
@@ -81,7 +81,7 @@ namespace BabyBook.Controllers
                 {
                     WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
                     WebSecurity.Login(model.UserName, model.Password);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Book");
                 }
                 catch (MembershipCreateUserException e)
                 {
