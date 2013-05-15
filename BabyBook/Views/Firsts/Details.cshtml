@@ -1,0 +1,29 @@
+﻿@model BabyBook.Models.First
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>First</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstEvent)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstEvent)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstValue)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstValue)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
