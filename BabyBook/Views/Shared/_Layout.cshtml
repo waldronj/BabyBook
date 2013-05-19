@@ -5,45 +5,19 @@
         <title>@ViewBag.Title - The Scoreboard</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
+        
     </head>
     <body>
         <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("The ScoreBoard", "Index", "Book")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Book")</li>
-                            <li>@Html.ActionLink("Firsts", "Index", "Firsts")</li>
-                            <li>@Html.ActionLink("Words", "Index", "Words")</li>
-                            <li>@Html.ActionLink("Appointments", "Index", "Measurements")</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            @RenderSection("featured", required:false)
         </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
+        <div class="row-fluid">
+            @RenderBody()
         </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - KCWaldrons Scoreboard</p>
-                </div>
-            </div>
-        </footer>
-
-        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/modernizr")
         @RenderSection("scripts", required: false)
+        
     </body>
 </html>

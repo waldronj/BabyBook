@@ -226,6 +226,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\glyphicons-halflings-white.png" />
     <Content Include="Content\img\glyphicons-halflings.png" />
+    <Content Include="Content\img\scoreBoard.jpg" />
+    <Content Include="Content\main.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <EntityDeploy Include="Models\BabyBook.edmx">
@@ -246,9 +248,12 @@
       <LastGenOutput>BabyBook.cs</LastGenOutput>
     </Content>
     <None Include="Properties\PublishProfiles\BabyBook.pubxml" />
+    <Content Include="Scripts\backstrech.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

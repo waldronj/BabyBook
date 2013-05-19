@@ -1,0 +1,9 @@
+﻿html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    background-size: 100% 100%;
+    background-image: url('/content/img/scoreBoard.jpg');
+    background-repeat: no-repeat;
+}

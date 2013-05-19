@@ -23,7 +23,10 @@ namespace BabyBook
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/Bootstrap.css", "~/Content/Bootstrap-responsive.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/Bootstrap.css", 
+                "~/Content/Bootstrap-responsive.css",
+                "~/Content/main.css"
+                ));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
